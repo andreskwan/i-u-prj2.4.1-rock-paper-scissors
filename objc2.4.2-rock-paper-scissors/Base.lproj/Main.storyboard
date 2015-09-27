@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Select Item View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SelectItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,6 +42,9 @@
                                 <state key="normal" title="Rock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hh6-qg-jsg" kind="presentation" identifier="playWithRock" id="tF7-3Z-9tt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKi-rF-b9B">
                                 <rect key="frame" x="268" y="452" width="65" height="30"/>
@@ -57,6 +60,9 @@
                                 <state key="normal" title="Paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hu-HT-bG8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -84,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="223" y="410"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Result View Controller-->
         <scene sceneID="zgv-LK-Jm8">
             <objects>
-                <viewController id="hh6-qg-jsg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameResult" id="hh6-qg-jsg" customClass="GameResultViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YlS-ht-mwT"/>
                         <viewControllerLayoutGuide type="bottom" id="OtC-ux-8sb"/>
@@ -110,6 +116,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lJ-au-ccv">
                                 <rect key="frame" x="265" y="452" width="71" height="30"/>
                                 <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="buttonDismissView:" destination="hh6-qg-jsg" eventType="touchUpInside" id="4dW-eX-5GL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,10 +130,16 @@
                             <constraint firstItem="8lJ-au-ccv" firstAttribute="top" relation="lessThanOrEqual" secondItem="ejf-VZ-ZFV" secondAttribute="bottom" constant="302" id="k1B-w9-UaT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelResultOfMatch" destination="ejf-VZ-ZFV" id="geE-WJ-HVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L7-1D-Ajk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="917" y="410"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tF7-3Z-9tt"/>
+    </inferredMetricsTieBreakers>
 </document>

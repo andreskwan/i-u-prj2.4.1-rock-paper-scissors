@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EAAD2B3F1BB8519100A38076 /* GameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAD2B3E1BB8519100A38076 /* GameResultViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EAF5DE901BB8465200E38EE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5DE8F1BB8465200E38EE5 /* main.m */; };
 		EAF5DE931BB8465200E38EE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5DE921BB8465200E38EE5 /* AppDelegate.m */; };
-		EAF5DE961BB8465200E38EE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5DE951BB8465200E38EE5 /* ViewController.m */; };
+		EAF5DE961BB8465200E38EE5 /* SelectItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5DE951BB8465200E38EE5 /* SelectItemViewController.m */; };
 		EAF5DE991BB8465200E38EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF5DE971BB8465200E38EE5 /* Main.storyboard */; };
 		EAF5DE9B1BB8465200E38EE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF5DE9A1BB8465200E38EE5 /* Images.xcassets */; };
 		EAF5DE9E1BB8465200E38EE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF5DE9C1BB8465200E38EE5 /* LaunchScreen.xib */; };
@@ -27,13 +28,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EAAD2B3D1BB8519100A38076 /* GameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultViewController.h; sourceTree = "<group>"; };
+		EAAD2B3E1BB8519100A38076 /* GameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultViewController.m; sourceTree = "<group>"; };
 		EAF5DE8A1BB8465200E38EE5 /* objc2.4.2-rock-paper-scissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc2.4.2-rock-paper-scissors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF5DE8E1BB8465200E38EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAF5DE8F1BB8465200E38EE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAF5DE911BB8465200E38EE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EAF5DE921BB8465200E38EE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EAF5DE941BB8465200E38EE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EAF5DE951BB8465200E38EE5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAF5DE941BB8465200E38EE5 /* SelectItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectItemViewController.h; sourceTree = "<group>"; };
+		EAF5DE951BB8465200E38EE5 /* SelectItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectItemViewController.m; sourceTree = "<group>"; };
 		EAF5DE981BB8465200E38EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAF5DE9A1BB8465200E38EE5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EAF5DE9D1BB8465200E38EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,9 +86,11 @@
 			children = (
 				EAF5DE911BB8465200E38EE5 /* AppDelegate.h */,
 				EAF5DE921BB8465200E38EE5 /* AppDelegate.m */,
-				EAF5DE941BB8465200E38EE5 /* ViewController.h */,
-				EAF5DE951BB8465200E38EE5 /* ViewController.m */,
+				EAF5DE941BB8465200E38EE5 /* SelectItemViewController.h */,
+				EAF5DE951BB8465200E38EE5 /* SelectItemViewController.m */,
 				EAF5DE971BB8465200E38EE5 /* Main.storyboard */,
+				EAAD2B3D1BB8519100A38076 /* GameResultViewController.h */,
+				EAAD2B3E1BB8519100A38076 /* GameResultViewController.m */,
 				EAF5DE9A1BB8465200E38EE5 /* Images.xcassets */,
 				EAF5DE9C1BB8465200E38EE5 /* LaunchScreen.xib */,
 				EAF5DE8D1BB8465200E38EE5 /* Supporting Files */,
@@ -219,7 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF5DE961BB8465200E38EE5 /* ViewController.m in Sources */,
+				EAF5DE961BB8465200E38EE5 /* SelectItemViewController.m in Sources */,
+				EAAD2B3F1BB8519100A38076 /* GameResultViewController.m in Sources */,
 				EAF5DE931BB8465200E38EE5 /* AppDelegate.m in Sources */,
 				EAF5DE901BB8465200E38EE5 /* main.m in Sources */,
 			);
@@ -418,6 +424,7 @@
 				EAF5DEAF1BB8465300E38EE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAF5DEB01BB8465300E38EE5 /* Build configuration list for PBXNativeTarget "objc2.4.2-rock-paper-scissorsTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				EAF5DEB21BB8465300E38EE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
