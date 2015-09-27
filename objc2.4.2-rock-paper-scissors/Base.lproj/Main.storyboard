@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-jP-kjh">
+                                <rect key="frame" x="250" y="20" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="R4Y-QL-yhT"/>
+                                    <constraint firstAttribute="width" constant="100" id="pFh-QF-eMQ"/>
+                                </constraints>
+                                <state key="normal" title="Paper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-VM-OPE">
+                                <rect key="frame" x="84" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Paper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbr-r0-STK">
+                                <rect key="frame" x="421" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FRJ-90-Dym"/>
+                                    <constraint firstAttribute="height" constant="100" id="OHi-s9-KQ0"/>
+                                </constraints>
+                                <state key="normal" title="Scissors">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kw-7f-CEM">
+                                <rect key="frame" x="79" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5Bq-qf-4nq"/>
+                                    <constraint firstAttribute="height" constant="100" id="iV9-bS-GG3"/>
+                                </constraints>
+                                <state key="normal" title="Rock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nbr-r0-STK" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ojq-jP-kjh" secondAttribute="trailing" constant="71" id="0AW-M0-Xuf"/>
+                            <constraint firstItem="0Kw-7f-CEM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="230" id="1jP-5k-alf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nbr-r0-STK" secondAttribute="trailing" constant="63" id="An8-5j-9oE"/>
+                            <constraint firstItem="Ojq-jP-kjh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0Kw-7f-CEM" secondAttribute="trailing" constant="71" id="GIJ-t9-puy"/>
+                            <constraint firstAttribute="centerX" secondItem="Ojq-jP-kjh" secondAttribute="centerX" id="VsP-iU-MZj"/>
+                            <constraint firstItem="0Kw-7f-CEM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="b2b-nP-fh7"/>
+                            <constraint firstItem="nbr-r0-STK" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0Kw-7f-CEM" secondAttribute="trailing" constant="242" id="qrU-zC-CZi"/>
+                            <constraint firstItem="nbr-r0-STK" firstAttribute="top" secondItem="Ojq-jP-kjh" secondAttribute="bottom" constant="130" id="rTV-FK-Pde"/>
+                            <constraint firstItem="0Kw-7f-CEM" firstAttribute="top" secondItem="Ojq-jP-kjh" secondAttribute="bottom" constant="130" id="spd-w9-xl3"/>
+                            <constraint firstItem="Ojq-jP-kjh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ub6-4M-TJ2"/>
+                            <constraint firstItem="nbr-r0-STK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="230" id="xgl-M1-T69"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="395" y="410"/>
         </scene>
     </scenes>
 </document>
