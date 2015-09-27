@@ -9,7 +9,9 @@
 #import "SelectItemViewController.h"
 #import "GameResultViewController.h"
 
-static NSString * const kGameResult = @"GameResult";
+static NSString * const kViewControllerIdentifierGameResult = @"GameResult";
+static NSString * const kSegueIdentifierRock = @"playWithRock";
+static NSString * const kSegueIdentifierScissors = @"playWithScissors";
 
 @interface SelectItemViewController ()
 
@@ -28,7 +30,7 @@ static NSString * const kGameResult = @"GameResult";
 }
 - (IBAction)buttonPaper:(UIButton *)sender {
     //1) instantiate the VC
-    GameResultViewController *gameResultVC = [self.storyboard instantiateViewControllerWithIdentifier:kGameResult];
+    GameResultViewController *gameResultVC = [self.storyboard instantiateViewControllerWithIdentifier:kViewControllerIdentifierGameResult];
     //2) Pass data to the VC
         gameResultVC.itemSelected = @"Paper";
     //3) Present VC
@@ -37,4 +39,20 @@ static NSString * const kGameResult = @"GameResult";
                      completion:nil];
 }
 
+- (IBAction)buttonRock:(id)sender {
+    //Just perform the segue
+    [self performSegueWithIdentifier:kSegueIdentifierRock
+                              sender:sender];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //1) identify if it is the right segue
+    if ([segue.identifier isEqualToString:kSegueIdentifierRock]) {
+        //1) instantiate the VC
+        GameResultViewController *gameResultVC = [segue destinationViewController];
+        //2) Pass data to the VC
+        gameResultVC.itemSelected = @"Rock";
+    }
+}
 @end
