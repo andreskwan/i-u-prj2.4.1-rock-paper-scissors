@@ -53,6 +53,12 @@ static NSString * const kSegueIdentifierScissors = @"playWithScissors";
         GameResultViewController *gameResultVC = [segue destinationViewController];
         //2) Pass data to the VC
         gameResultVC.itemSelected = @"Rock";
+    } else if ([segue.identifier isEqualToString:kSegueIdentifierScissors]){
+        GameResultViewController *gameResultVC = [segue destinationViewController];
+        gameResultVC.itemSelected = @"Scissors";
+    } else {
+        
     }
+        
 }
 @end
